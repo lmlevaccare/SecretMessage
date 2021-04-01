@@ -1,8 +1,11 @@
- let input = document.querySelector("input");
+ let input = document.querySelector("#message-input");
 
 document.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
 
-    console.log(input.value)
+
+    const encrypted = btoa(input.value)
+    document.querySelector("#link-input").value = encrypted; 
+    
 }
 )
